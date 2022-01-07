@@ -1,10 +1,10 @@
 <template>
   <div>
     <el-container>
-      <el-header style="height: 50px">Header</el-header>
+      <el-header class="header-box">Header</el-header>
       <el-container>
         <el-aside width="200px">
-          Aside
+          <Sidebar></Sidebar>
         </el-aside>
         <el-main>
           <AppMain></AppMain>
@@ -15,13 +15,17 @@
 </template>
 
 <script>
-import { AppMain } from './components';
+import { AppMain, Sidebar } from './components';
 
 export default {
   name: 'Index',
-  components: { AppMain }
+  components: { AppMain, Sidebar }
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.header-box{
+  height:50px;
+  background:#20a0ff;
+}
 </style>
